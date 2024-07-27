@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate | Climate Change Initiative</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        
+        <div class="hero">
+            
+            <div class="hero-text">
+                <h1>Donate to Make a Difference</h1>
+                <p>Every contribution counts in the fight against climate change. Choose how you want to help below.</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="donate-page">
+            <h1>Support Our Climate Initiatives</h1>
+            <p>Your donation will fund critical projects aimed at combating climate change and fostering a sustainable future. Here’s how you can contribute:</p>
+            <div class="donation-options">
+                <div class="donation-option">
+                    <h2>One-Time Donation</h2>
+                    <p>Make a one-time donation to support our ongoing climate initiatives. Your contribution will be used where it is needed most.</p>
+                    <form action="submit_donation.php" method="POST">
+                        <label for="amount-one-time">Amount:</label>
+                        <input type="number" id="amount-one-time" name="amount" placeholder="Enter amount" required>
+                        <button type="submit">Donate Now</button>
+                    </form>
+                </div>
+                <div class="donation-option">
+                    <h2>Monthly Subscription</h2>
+                    <p>Commit to a monthly donation to provide ongoing support for our projects. Your regular contribution helps us plan and implement long-term solutions.</p>
+                    <form action="submit_donation.php" method="POST">
+                        <label for="amount-monthly">Monthly Amount:</label>
+                        <input type="number" id="amount-monthly" name="amount" placeholder="Enter amount" required>
+                        <button type="submit">Subscribe Now</button>
+                    </form>
+                </div>
+                <div class="donation-option">
+                    <h2>Corporate Sponsorship</h2>
+                    <p>Partner with us to make a significant impact. Corporate sponsors play a crucial role in our mission by providing substantial support for large-scale projects.</p>
+                    <p><a href="mailto:contact@climatechangeinitiative.org">Contact us</a> to discuss sponsorship opportunities and benefits.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Climate Change Initiative</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,476 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e3f2fd; /* Light blue for a fresh look */
+    color: #333;
+}
+
+header {
+    position: relative;
+}
+
+nav {
+    background-color: #004d40; /* Deep teal for a climate-inspired look */
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #b2dfdb; /* Lighter teal on hover */
+}
+
+.hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.hero-images {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.hero-images img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.hero-images img.active {
+    opacity: 1;
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 77, 64, 0.7); /* Semi-transparent teal background */
+    padding: 2em;
+    border-radius: 8px;
+}
+
+.hero-text h1 {
+    font-size: 2rem;
+    margin: 0;
+    color: #a5d6a7; /* Light green */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    font-family: sans-serif;
+    color: #dcedc8; /* Light greenish beige */
+}
+
+.hero-button {
+    background-color: #00796b; /* Teal green */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+.hero-button:hover {
+    background-color: #004d40; /* Darker teal */
+}
+
+main {
+    padding: 2rem;
+}
+
+section {
+    background: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #004d40; /* Deep teal for headings */
+}
+
+a {
+    background-color: #00796b; /* Teal green */
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+a:hover {
+    background-color: #004d40; /* Darker teal */
+}
+
+.like-button {
+    background-color: #0288d1; /* Bright blue */
+}
+
+.like-button:hover {
+    background-color: #01579b; /* Darker blue */
+}
+
+footer {
+    background-color: #004d40; /* Deep teal */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Donate Page Styles */
+#donate-page {
+    padding: 2rem;
+    background-color: #e8f5e9; /* Very light green */
+}
+
+.donation-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.donation-option {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.donation-option h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #004d40; /* Deep teal */
+}
+
+.donation-option p {
+    margin-bottom: 1rem;
+    color: #555; /* Darker grey for readability */
+}
+
+.donation-option form {
+    display: flex;
+    flex-direction: column;
+}
+
+.donation-option label {
+    margin-bottom: 0.5rem;
+    color: #004d40; /* Deep teal */
+}
+
+.donation-option input {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #004d40; /* Deep teal border */
+    border-radius: 5px;
+}
+
+.donation-option button {
+    background-color: #00796b; /* Teal green */
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.donation-option button:hover {
+    background-color: #004d40; /* Darker teal */
+}
+.card-button {
+    background-color: #00796b; /* Teal green */
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.card-button:hover {
+    background-color: #004d40; /* Darker teal */
+}
+
+/* Explore Now Page Styles */
+#explore-page {
+    padding: 2rem;
+    background-color: #e8f5e9; /* Very light green */
+}
+
+#explore-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #004d40; /* Deep teal */
+}
+
+#explore-page p {
+    font-size: 1rem;
+    color: #555; /* Darker grey for readability */
+}
+
+.explore-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Reduced gap for better fit on small devices */
+    justify-content: center;
+}
+
+.explore-option {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 320px; /* Reduced max-width for better fit */
+    text-align: center;
+    margin: 0.5rem; /* Margin for better spacing on small devices */
+}
+
+.explore-option h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #004d40; /* Deep teal */
+}
+
+.explore-option p {
+    margin-bottom: 1rem;
+    color: #555; /* Darker grey for readability */
+}
+
+.explore-option img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.card-button {
+    background-color: #00796b; /* Teal green */
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.card-button:hover {
+    background-color: #004d40; /* Darker teal */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #explore-page {
+        padding: 1rem;
+    }
+
+    .explore-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-option h2 {
+        font-size: 1.3rem;
+    }
+
+    .explore-option p {
+        font-size: 0.9rem;
+    }
+
+    .explore-option button {
+        padding: 0.5rem;
+    }
+}
+
+
+/* Quiz Page Styles */
+#quiz-page {
+    padding: 2rem;
+    background-color: #e8f5e9; /* Very light green */
+}
+
+#quiz-page h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #004d40; /* Deep teal */
+}
+
+#quiz-page p {
+    font-size: 1rem;
+    color: #555; /* Darker grey for readability */
+}
+
+.quiz-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* Reduced gap for better fit on small devices */
+    justify-content: center;
+}
+
+.quiz-option {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 320px; /* Reduced max-width for better fit */
+    text-align: center;
+    margin: 0.5rem; /* Margin for better spacing on small devices */
+}
+
+.quiz-option h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #004d40; /* Deep teal */
+}
+
+.quiz-option p {
+    margin-bottom: 1rem;
+    color: #555; /* Darker grey for readability */
+}
+
+.quiz-button {
+    background-color: #00796b; /* Teal green */
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.quiz-button:hover {
+    background-color: #004d40; /* Darker teal */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #quiz-page {
+        padding: 1rem;
+    }
+
+    .quiz-options {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .quiz-option h2 {
+        font-size: 1.3rem;
+    }
+
+    .quiz-option p {
+        font-size: 0.9rem;
+    }
+
+    .quiz-button {
+        padding: 0.5rem;
+    }
+}
+
+
+/* Navigation Styles */
+nav {
+    background-color: #004d40; /* Deep teal */
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #b2dfdb; /* Lighter teal on hover */
+}
+
+/* Responsive Styles for Navigation */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        font-size: 0.9rem;
+    }
+}
